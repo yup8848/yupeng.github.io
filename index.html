@@ -1,11 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>yuepng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歴書</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        #layout-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin: 25px 0;
+            padding: 0 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-bottom: 3px solid #3498db;
+        }
+        h2 {
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin: 30px 0 15px;
+        }
+        .info-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        .info-table th {
+            text-align: right;
+            padding: 10px;
+            width: 25%;
+            white-space: nowrap;
+        }
+        .info-table td {
+            padding: 10px;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .timeline li {
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+        }
+        .timeline-date {
+            text-align: right;
+            font-weight: bold;
+        }
+        .detail-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .timeline li {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+            .timeline-date {
+                text-align: left;
+            }
+            .info-table th {
+                width: auto;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>yupeng的个人主页</h1>
-    <h1>Hello ~</h1>
+    <div id="layout-content">
+        <h1>履　歴　書</h1>
+        <div class="section">
+            <div class="section" style="display: flex; align-items: start; gap: 30px;">
+                <div style="flex: 1;">
+                    <dl class="personal-info">
+                        <dt>氏名</dt>
+                        <dd>于　鵬（う　ほう）</dd>
+                        <dt>生年月日</dt>
+                        <dd>1997年10月4日生（満27才）</dd>
+                        <dt>現住所</dt>
+                        <dd>湖南省長沙市</dd>
+                        <dt>電話番号</dt>
+                        <dd>+86 193-5318-6149</dd>
+                        <dt>メール</dt>
+                        <dd>yup8848@gmail.com</dd>
+                    </dl>
+                </div>
+                <div style="flex-shrink: 0;">
+                    <img src="files/person_photo.jpg" alt="証明写真" style="width: 150px; height: auto; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>学歴・職歴</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-date">2015年9月</div>
+                    <div>長沙理工大学 光電情報学科 入学</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2019年6月</div>
+                    <div>長沙理工大学 交通工学学科 卒業</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2020年4月</div>
+                    <div>福岡工業大学大学院 工学研究科 情報工学専攻修士課程 入学</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2022年4月</div>
+                    <div>福岡工業大学大学院 工学研究科 情報工学専攻修士課程 修了</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2022年9月</div>
+                    <div>湖南湘科研究院 入社</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2024年12月</div>
+                    <div>湖南湘科研究院および湖南スマート運護株式会社 退社</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>取得資格</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-date">2017年6月</div>
+                    <div>マイクロソフト オフィス スペシャリスト（MOS）取得</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2018年12月</div>
+                    <div>College English Test CET6（日常会話）合格</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2018年12月</div>
+                    <div>運転免許（中国C1）取得</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2021年7月</div>
+                    <div>日本語能力試験N2（112点）合格</div>
+                </li>
+                <li>
+                    <div class="timeline-date">2024年12月</div>
+                    <div>日本語能力試験N1受験</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>受賞歴・コンテスト実績</h2>
+            <div class="detail-section">
+                <h3>大学時代の研究開発コンテスト</h3>
+                <ol>
+                    <li>
+                        <strong>音楽連動LEDタワーの開発（1年次）</strong>
+                        <ul>
+                            <li>オンライン情報を活用した独自の設計・実装</li>
+                            <li>学校電子デザインコンテスト 三等賞受賞</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <strong>医薬品物流最適化プロジェクト（2年次）</strong>
+                        <ul>
+                            <li>長沙市ロジスティクスセンターの配送最適化</li>
+                            <li>VISSIM、TransCADを用いた都市高速道路網分析</li>
+                            <li>金霞杯物流設計大会 湖南省一等賞受賞</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <strong>交通安全早期警告システム（3年次）</strong>
+                        <ul>
+                            <li>ドローン収集データを活用した無信号交差点の安全性分析</li>
+                            <li>交通科学技術コンテスト 国家二等賞受賞</li>
+                            <li>中国ソフトウェア設計特許取得</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>研究開発実績</h2>
+            <div class="detail-section">
+                <h3>学会発表</h3>
+                <ul>
+                    <li>ITC-CSCC2021: Time and Environment Dependency Aware Fuel Consumption Tracking Method for Improving Drivers and Trucks Management</li>
+                    <li>ICECC 2022: A Machine Learning Based Fuel Consumption Saving Method with Time and Environment Dependency Aware Management</li>
+                </ul>
+            </div>
+            
+            <div class="detail-section">
+                <h3>研究課題</h3>
+                <p>予測モデルを通じて、初心者ドライバーの燃料消費量最適化を支援する車載デバイスの設計。交通環境に基づく燃料節約操作の指示システムの開発。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>職務経歴</h2>
+            
+            <div class="detail-section">
+                <h3>大学院研究・インターンシップ経験</h3>
+                <p>中国のカーネットワーキング会社でのインターンシップにて、以下のプロジェクトを担当：</p>
+                <ul>
+                    <li>解釈可能な機械学習予測モデルの開発・実装</li>
+                    <li>運転行動最適化による燃料消費効率の改善</li>
+                    <li>車両データ収集システムの効率化（検出器の削減とデータ共有の実現）</li>
+                    <li>車速安全検出およびGPS速度検出データの統合・分析</li>
+                </ul>
+            </div>
+
+            <div class="detail-section">
+                <h3>湖南湘科研究院（2022年9月～2024年12月）</h3>
+                <h4>研究開発エンジニア</h4>
+                
+                <h5>主要プロジェクト</h5>
+                <ol>
+                    <li><strong>自律走行ロボットシステムの開発</strong>
+                        <ul>
+                            <li>ROS1によるライン追跡システムの実装</li>
+                            <li>OCR文字認識システムの開発</li>
+                            <li>影響光条件下での視覚認識性能の最適化</li>
+                            <li>ChatGPTを活用した顔認識・物体認識の研究</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>自動搬送システムの開発</strong>
+                        <ul>
+                            <li>ロボットボックス搬送システムの電気系統設計</li>
+                            <li>Qtによる転送ステーション制御インターフェース開発</li>
+                            <li>センサー統合とリアルタイム制御システムの実装</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>プロジェクトマネジメント</strong>
+                        <ul>
+                            <li>プロジェクト管理ツール「禅道」の導入・運用</li>
+                            <li>要件定義・テストケース作成</li>
+                            <li>ステーションコントロール戦略の立案</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>監視システム開発</strong>
+                        <ul>
+                            <li>海康車載監視クラウドサービスの構築</li>
+                            <li>クラウドベースの映像管理システム開発</li>
+                            <li>リアルタイム位置追跡システムの実装</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>スマートマンホール管理システム開発</strong>
+                        <ul>
+                            <li>WeChat小プログラムの開発</li>
+                            <li>MQTTサーバーの構築・運用</li>
+                            <li>地図機能とQRコード認識システムの実装</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>管理プラットフォーム構築</strong>
+                        <ul>
+                            <li>Flaskベースのバックエンド開発</li>
+                            <li>ユーザー管理・権限システムの実装</li>
+                            <li>ログ管理システムの構築</li>
+                            <li>AIツール連携機能の実装</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4>使用技術</h4>
+                <ul>
+                    <li><strong>プログラミング言語：</strong> Python、Java、C++、JavaScript</li>
+                    <li><strong>フレームワーク：</strong> Flask、ROS1、Qt、Vue.js</li>
+                    <li><strong>データベース：</strong> MySQL</li>
+                    <li><strong>開発ツール：</strong> Docker、Git、SVN、Android Studio</li>
+                    <li><strong>クラウド環境：</strong> Tencent Cloud、CentOS</li>
+                    <li><strong>その他：</strong> MQTT、ChatGPT、Claude、Pearadmin</li>
+                </ul>
+
+                <h4>成果</h4>
+                <ul>
+                    <li>デリバリーロボットの視覚認識システムの安定性向上</li>
+                    <li>自動搬送システムの電気系統設計と実装</li>
+                    <li>クラウドベース監視システムの構築と運用</li>
+                    <li>スマートマンホール管理システムの開発とリリース</li>
+                    <li>バックエンド管理プラットフォームの設計・実装</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>専門技術</h2>
+            <div class="detail-section">
+                <ul>
+                    <li>バックエンドシステム開発（Flask, MySQL, Docker）</li>
+                    <li>ロボット制御システム開発（ROS1, C++）</li>
+                    <li>画像処理・機械学習（Python, OpenCV）</li>
+                    <li>クラウドサービス構築（Tencent Cloud）</li>
+                    <li>モバイルアプリケーション開発（WeChat小程序）</li>
+                    <li>プロジェクト管理</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>志望動機</h2>
+            <div class="detail-section">
+                <p>貴社の充実した教育システムと外国人採用の実績に魅力を感じております。長期的なキャリア形成が可能な環境で、技術力を活かして貢献したいと考えております。</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
